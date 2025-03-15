@@ -7,41 +7,36 @@ Preview do Projeto
 Siga os passos abaixo para rodar o projeto localmente:
 
 Pré-requisitos
-Node.js instalado (versão 16 ou superior).
+- Node.js instalado (versão 16 ou superior).
 
-npm ou yarn para gerenciamento de dependências.
+- npm ou yarn para gerenciamento de dependências.
 
 Passos para Execução
 Clone o repositório:
 
 bash
-Copy
 git clone https://github.com/FernandoHenriqueLonghi17/portfolio.git
+
 cd portfolio
 Instale as dependências:
 
 bash
-Copy
 npm install
 ou, se estiver usando Yarn:
 
 bash
-Copy
 yarn install
 Inicie o servidor de desenvolvimento:
 
 bash
-Copy
 npm start
 ou, com Yarn:
 
 bash
-Copy
 yarn start
 Acesse o projeto:
 Abra o navegador e acesse:
 
-Copy
 http://localhost:3000
 🛠️ Tecnologias Utilizadas
 React: Biblioteca JavaScript para construção da interface do usuário.
