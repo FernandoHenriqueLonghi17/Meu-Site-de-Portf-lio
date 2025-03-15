@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  animation: gradient 8s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+.shine-effect {
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.05), 
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: shine 8s linear infinite;
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 15px rgba(59, 130, 246, 0.3); }
+  50% { text-shadow: 0 0 30px rgba(59, 130, 246, 0.6); }
+}
+
+.text-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-border {
+  0% { border-color: rgba(59, 130, 246, 0.1); }
+  50% { border-color: rgba(59, 130, 246, 0.3); }
+  100% { border-color: rgba(59, 130, 246, 0.1); }
+}
+
+.animate-pulse-border {
+  animation: pulse-border 2s infinite;
+}
+
+.card-hover {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  background-size: 200% 200%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.05) 0%,
+    rgba(20, 184, 166, 0.05) 50%,
+    rgba(168, 85, 247, 0.05) 100%
+  );
+  background-size: 200% 200%;
+}
+
+.skill-icon {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-icon:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 8px currentColor);
+}
+
+.section-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gradient-border {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.03) 0%,
+    rgba(20, 184, 166, 0.03) 50%,
+    rgba(168, 85, 247, 0.03) 100%
+  );
+  background-size: 200% 200%;
+  animation: gradientBG 15s ease infinite;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(45deg, 
+    rgba(59, 130, 246, 0.1), 
+    rgba(20, 184, 166, 0.1), 
+    rgba(168, 85, 247, 0.1)
+  );
+  border-radius: 1rem;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gradient-border:hover::before {
+  opacity: 0.3;
+}
+
+.glass-effect {
+  backdrop-filter: blur(8px);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  background-size: 200% 200%;
+  animation: gradientBG 15s ease infinite;
+}
+
+.glass-effect:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.06) 0%,
+    rgba(20, 184, 166, 0.06) 50%,
+    rgba(168, 85, 247, 0.06) 100%
+  );
+  background-size: 200% 200%;
+}
+
+.float-on-hover:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-in-out;
+}
