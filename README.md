@@ -15,22 +15,20 @@ Passos para Execução
 Clone o repositório:
 
 bash
-git clone https://github.com/FernandoHenriqueLonghi17/portfolio.git
+-git clone https://github.com/FernandoHenriqueLonghi17/portfolio.git
 
 cd portfolio
-Instale as dependências:
+-Instale as dependências:
 
 bash
-npm install
-ou, se estiver usando Yarn:
+-npm install ou, se estiver usando Yarn:
 
 bash
 yarn install
 Inicie o servidor de desenvolvimento:
 
 bash
-npm start
-ou, com Yarn:
+-npm start ou, com Yarn:
 
 bash
 yarn start
